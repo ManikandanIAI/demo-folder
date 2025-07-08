@@ -4,9 +4,9 @@ touch copy.txt
 free -m > copy.txt
 echo "############################" >> copy.txt
 #check memory consumption
-df -h > copy.txt
+df -h >> copy.txt
 echo "#############################" >> copy.txt
 #check process taken high utilization
-ps -ef > copy.txt
+ps -ef >> copy.txt
 echo "#################################" >> copy.txt
 
