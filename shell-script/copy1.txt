@@ -1,0 +1,27 @@
+=== CPU Usage ===
+Error: mpstat not installed. Install sysstat package.
+=================
+
+=== Disk Usage ===
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1.6G  2.9M  1.6G   1% /run
+efivarfs        438K  235K  199K  55% /sys/firmware/efi/efivars
+/dev/nvme0n1p3  456G   93G  340G  22% /
+tmpfs           7.7G  286M  7.4G   4% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/nvme0n1p1  1.1G  127M  920M  13% /boot/efi
+tmpfs           1.6G   18M  1.6G   2% /run/user/1000
+=================
+
+=== Top Processes by CPU Usage ===
+    PID    PPID %CPU %MEM CMD
+ 131339  131202  8.5  0.9 /proc/self/exe --type=gpu-process --disable-gpu-sandbox --no-sandbox --crashpad-handler-pid=131224 --enable-crash-reporter=49cdf804-6725-4357-8eeb-a9abd80a1487,no_channel --user-data-dir=/home/manikandana/.config/Code --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=3,i,5426598790610582711,12991044069662823429,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+ 160845  160825  6.2  0.3 /usr/local/bin/python3.12 /usr/local/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+ 114743    4974  5.1  4.1 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=514 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=19002386588 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,11893974175033526756,2786826577774011814,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
+   2106    1908  3.4  2.2 /usr/bin/gnome-shell
+   5289    4970  2.7  1.4 /opt/google/chrome/chrome --type=gpu-process --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --change-stack-guard-on-fork=enable --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --metrics-shmem-handle=4,i,7988403509310469340,435032233872602535,262144 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
+   4947    1908  2.6  3.1 /opt/google/chrome/chrome
+   7257    5769  2.0  2.0 /snap/slack/196/usr/lib/slack/slack --type=zygote --no-sandbox
+   7587    4974  1.6  3.5 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=36 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=79656795 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,11597251866021460435,17631819758223637408,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
+ 131308  131205  1.6  2.3 /snap/code/198/usr/share/code/code --type=zygote --no-sandbox
+=================
