@@ -1,3 +1,16 @@
+               total        used        free      shared  buff/cache   available
+Mem:           15679        6941        1759        1092        6978        7266
+Swap:           2047           0        2047
+############################
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1.6G  2.9M  1.6G   1% /run
+efivarfs        438K  235K  199K  55% /sys/firmware/efi/efivars
+/dev/nvme0n1p3  456G   93G  340G  22% /
+tmpfs           7.7G  305M  7.4G   4% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/nvme0n1p1  1.1G  127M  920M  13% /boot/efi
+tmpfs           1.6G   18M  1.6G   2% /run/user/1000
+#############################
 UID          PID    PPID  C STIME TTY          TIME CMD
 root           1       0  0 10:14 ?        00:00:25 /sbin/init splash
 root           2       0  0 10:14 ?        00:00:00 [kthreadd]
@@ -131,7 +144,7 @@ root         159       2  0 10:14 ?        00:00:00 [kworker/R-md_bi]
 root         160       2  0 10:14 ?        00:00:00 [kworker/R-edac-]
 root         161       2  0 10:14 ?        00:00:00 [kworker/R-devfr]
 root         162       2  0 10:14 ?        00:00:00 [watchdogd]
-root         163       2  0 10:14 ?        00:00:00 [kworker/13:1H-kblockd]
+root         163       2  0 10:14 ?        00:00:00 [kworker/13:1H-events_highpri]
 root         164       2  0 10:14 ?        00:00:00 [kswapd0]
 root         165       2  0 10:14 ?        00:00:00 [ecryptfs-kthread]
 root         166       2  0 10:14 ?        00:00:00 [kworker/R-kthro]
@@ -144,18 +157,18 @@ root         184       2  0 10:14 ?        00:00:00 [kworker/R-kstrp]
 root         207       2  0 10:14 ?        00:00:00 [kworker/R-charg]
 root         229       2  0 10:14 ?        00:00:00 [kworker/18:1H-kblockd]
 root         233       2  0 10:14 ?        00:00:00 [kworker/4:1H-kblockd]
-root         246       2  0 10:14 ?        00:00:00 [kworker/0:1H-events_highpri]
+root         246       2  0 10:14 ?        00:00:00 [kworker/0:1H-kblockd]
 root         249       2  0 10:14 ?        00:00:00 [kworker/6:1H-kblockd]
 root         250       2  0 10:14 ?        00:00:00 [kworker/7:1H-kblockd]
-root         251       2  0 10:14 ?        00:00:00 [kworker/1:1H-events_highpri]
+root         251       2  0 10:14 ?        00:00:00 [kworker/1:1H-kblockd]
 root         252       2  0 10:14 ?        00:00:02 [kworker/10:1H-kblockd]
-root         253       2  0 10:14 ?        00:00:01 [kworker/12:1H-kblockd]
-root         254       2  0 10:14 ?        00:00:01 [kworker/9:1H-events_highpri]
+root         253       2  0 10:14 ?        00:00:01 [kworker/12:1H-events_highpri]
+root         254       2  0 10:14 ?        00:00:01 [kworker/9:1H-kblockd]
 root         255       2  0 10:14 ?        00:00:00 [kworker/14:1H-kblockd]
 root         256       2  0 10:14 ?        00:00:00 [kworker/15:1H-kblockd]
 root         257       2  0 10:14 ?        00:00:00 [kworker/17:1H-kblockd]
 root         258       2  0 10:14 ?        00:00:00 [kworker/16:1H]
-root         259       2  0 10:14 ?        00:00:00 [kworker/2:1H-events_highpri]
+root         259       2  0 10:14 ?        00:00:00 [kworker/2:1H-kblockd]
 root         260       2  0 10:14 ?        00:00:00 [kworker/11:1H-kblockd]
 root         261       2  0 10:14 ?        00:00:00 [kworker/19:1H-kblockd]
 root         265       2  0 10:14 ?        00:00:00 [kworker/8:1H-kblockd]
@@ -246,7 +259,7 @@ manikan+    2074    1908  0 10:14 ?        00:00:00 /usr/libexec/gvfsd-fuse /run
 manikan+    2081    1908  0 10:14 ?        00:00:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
 manikan+    2096    2081  0 10:14 ?        00:00:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
 manikan+    2103    2096  0 10:14 ?        00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus
-manikan+    2106    1908  3 10:14 ?        00:14:40 /usr/bin/gnome-shell
+manikan+    2106    1908  3 10:14 ?        00:14:42 /usr/bin/gnome-shell
 manikan+    2170    1908  0 10:14 ?        00:00:00 /usr/libexec/gnome-shell-calendar-server
 manikan+    2176    1908  0 10:14 ?        00:00:00 /usr/libexec/evolution-source-registry
 manikan+    2183    1908  0 10:14 ?        00:00:05 /usr/libexec/goa-daemon
@@ -269,7 +282,7 @@ manikan+    2281    1908  0 10:14 ?        00:00:00 /usr/libexec/gsd-a11y-settin
 manikan+    2282    1908  0 10:14 ?        00:00:00 /usr/libexec/gsd-color
 manikan+    2284    1908  0 10:14 ?        00:00:00 /usr/libexec/gsd-datetime
 manikan+    2285    2280  0 10:14 ?        00:00:04 /usr/bin/ibus-daemon --panel disable
-manikan+    2287    1908  0 10:14 ?        00:00:08 /usr/libexec/gsd-housekeeping
+manikan+    2287    1908  0 10:14 ?        00:00:09 /usr/libexec/gsd-housekeeping
 manikan+    2289    1908  0 10:14 ?        00:00:00 /usr/libexec/gsd-keyboard
 manikan+    2291    1908  0 10:14 ?        00:00:00 /usr/libexec/gsd-media-keys
 manikan+    2293    1908  0 10:14 ?        00:00:00 /usr/libexec/gsd-power
@@ -294,7 +307,7 @@ manikan+    2597    1908  0 10:14 ?        00:00:10 /usr/libexec/xdg-desktop-por
 manikan+    2601    1908  0 10:14 ?        00:00:18 /usr/libexec/xdg-desktop-portal-gnome
 manikan+    2615    1908  0 10:14 ?        00:00:00 /usr/libexec/xdg-desktop-portal-gtk
 root        2657       1  0 10:14 ?        00:00:04 /usr/sbin/cups-browsed
-root        2658       1  0 10:14 ?        00:01:09 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        2658       1  0 10:14 ?        00:01:10 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
 kernoops    2685       1  0 10:14 ?        00:00:00 /usr/sbin/kerneloops --test
 kernoops    2693       1  0 10:14 ?        00:00:00 /usr/sbin/kerneloops
 manikan+    3079    1908  0 10:14 ?        00:00:00 /usr/libexec/gvfsd-metadata
@@ -312,9 +325,9 @@ root        3839       1  0 10:14 ?        00:00:03 /usr/bin/containerd-shim-run
 root        3843       1  0 10:14 ?        00:00:03 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 5d67562397e8cc5e4087a1c5eecce7b15a95c57175d46cddca452e2b82ef749f -address /run/containerd/containerd.sock
 root        3949       1  0 10:14 ?        00:00:02 /usr/bin/containerd-shim-runc-v2 -namespace moby -id b49dfdaca505801f05d376753cc7b2c32611ef0af6914cd2956071f0b27d2dca -address /run/containerd/containerd.sock
 root        3972    3843  0 10:14 ?        00:00:00 npm run start
-999         3990    3827  0 10:14 ?        00:02:18 redis-server *:6379
+999         3990    3827  0 10:14 ?        00:02:19 redis-server *:6379
 root        3996    3839  0 10:14 ?        00:00:00 /bin/sh -c sh -c "serve out -l $PORT"
-999         4009    3826  0 10:14 ?        00:03:45 mongod --auth --bind_ip_all
+999         4009    3826  0 10:14 ?        00:03:46 mongod --auth --bind_ip_all
 root        4017    3949  0 10:14 ?        00:00:00 nginx: master process nginx -g daemon off;
 manikan+    4169    1908  0 10:14 ?        00:00:00 /snap/snapd-desktop-integration/315/usr/bin/snapd-desktop-integration
 manikan+    4234    4169  0 10:14 ?        00:00:00 /snap/snapd-desktop-integration/315/usr/bin/snapd-desktop-integration
@@ -342,7 +355,7 @@ systemd+    4403    4017  0 10:14 ?        00:00:00 nginx: worker process
 systemd+    4404    4017  0 10:14 ?        00:00:00 nginx: worker process
 root        4405    3972  0 10:14 ?        00:00:00 sh -c next start
 root        4406    4405  0 10:14 ?        00:00:00 next-server (v15.1.7)
-manikan+    4947    1908  2 10:14 ?        00:11:09 /opt/google/chrome/chrome
+manikan+    4947    1908  2 10:14 ?        00:11:10 /opt/google/chrome/chrome
 manikan+    4956    4947  0 10:14 ?        00:00:00 cat
 manikan+    4957    4947  0 10:14 ?        00:00:00 cat
 manikan+    4961    1908  0 10:14 ?        00:00:00 /opt/google/chrome/chrome_crashpad_handler --monitor-self --monitor-self-annotation=ptype=crashpad-handler --database=/home/manikandana/.config/google-chrome/Crash Reports --metrics-dir=/home/manikandana/.config/google-chrome --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=lsb-release=Ubuntu 22.04.5 LTS --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=137.0.7151.119 --initial-client-fd=5 --shared-client-connection
@@ -350,7 +363,7 @@ manikan+    4963    1908  0 10:14 ?        00:00:00 /opt/google/chrome/chrome_cr
 manikan+    4970    4947  0 10:14 ?        00:00:00 /opt/google/chrome/chrome --type=zygote --no-zygote-sandbox --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --change-stack-guard-on-fork=enable
 manikan+    4971    4947  0 10:14 ?        00:00:00 /opt/google/chrome/chrome --type=zygote --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --change-stack-guard-on-fork=enable
 manikan+    4974    4971  0 10:14 ?        00:00:00 /opt/google/chrome/chrome --type=zygote --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --change-stack-guard-on-fork=enable
-manikan+    5000    2106  0 10:14 ?        00:03:43 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.U18682 -listen 4 -listen 5 -displayfd 6 -initfd 7
+manikan+    5000    2106  0 10:14 ?        00:03:44 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.U18682 -listen 4 -listen 5 -displayfd 6 -initfd 7
 manikan+    5109    1908  0 10:14 ?        00:00:00 /usr/libexec/gsd-xsettings
 manikan+    5224    1908  0 10:14 ?        00:00:00 /usr/libexec/ibus-x11
 manikan+    5289    4970  2 10:14 ?        00:11:33 /opt/google/chrome/chrome --type=gpu-process --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --change-stack-guard-on-fork=enable --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --metrics-shmem-handle=4,i,7988403509310469340,435032233872602535,262144 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
@@ -358,7 +371,7 @@ manikan+    5295    4947  0 10:14 ?        00:03:35 /opt/google/chrome/chrome --
 manikan+    5305    4974  0 10:14 ?        00:00:05 /opt/google/chrome/chrome --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=utility --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,6753121928109082459,16957994842969842887,524288 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
 manikan+    5439    4974  0 10:14 ?        00:00:01 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=10 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=24890295 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,9142495520936730992,13583123814791264708,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
 manikan+    5447    4974  0 10:14 ?        00:00:01 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=11 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=24895198 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,16850677865053354714,10991104279863283270,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
-manikan+    5761    1908  0 10:14 ?        00:01:16 /snap/slack/196/usr/lib/slack/slack --no-sandbox --executed-from=/home/manikandana --pid=5654
+manikan+    5761    1908  0 10:14 ?        00:01:17 /snap/slack/196/usr/lib/slack/slack --no-sandbox --executed-from=/home/manikandana --pid=5654
 manikan+    5768    5761  0 10:14 ?        00:00:00 /snap/slack/196/usr/lib/slack/slack --type=zygote --no-zygote-sandbox --no-sandbox
 manikan+    5769    5761  0 10:14 ?        00:00:00 /snap/slack/196/usr/lib/slack/slack --type=zygote --no-sandbox
 manikan+    5816    1908  0 10:14 ?        00:00:00 /snap/slack/196/usr/lib/slack/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --no-upload-gzip --database=/home/manikandana/snap/slack/196/.config/Slack/Crashpad --url=https://slack.com/apps/sentryproxy/api/5277886/minidump/?sentry_key=fd30fe469dbf4aec9db40548e5acf91e --annotation=_productName=Slack --annotation=_version=4.43.52 --annotation=lsb-release=Ubuntu Core 20 --annotation=plat=Linux --annotation=prod=Electron --annotation=sentry___initialScope={"release":"Slack@4.43.52","environment":"production","user":{"id":"43f828dc-a856-4f3d-bb39-d815af3c4710"},"tags":{"uuid":"43f828dc-a856-4f3d-bb39-d815af3c4710"},"extra":{"sessionId":"NDNmODI4ZGMtYTg1Ni00ZjNkLWJiMzktZDgxNWFmM2M0NzEwXzE3NTE5NDk4NzQxOTU="}} --annotation=ver=35.1.2 --initial-client-fd=37 --shared-client-connection
@@ -366,7 +379,7 @@ manikan+    5844    5768  0 10:14 ?        00:01:42 /snap/slack/196/usr/lib/slac
 manikan+    5876    5761  0 10:14 ?        00:00:14 /proc/self/exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=5816 --enable-crash-reporter=50ef4c44-f215-40d9-b586-9b276cba526b,no_channel --user-data-dir=/home/manikandana/snap/slack/196/.config/Slack --standard-schemes=app,slack-webapp-dev --secure-schemes=app,slack-webapp-dev --bypasscsp-schemes=slack-webapp-dev --cors-schemes=slack-webapp-dev --fetch-schemes=slack-webapp-dev --service-worker-schemes=slack-webapp-dev --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,15654117589985914813,8740638580040260405,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,PdfUseShowSaveFilePicker,WebRTCPipeWireCapturer --disable-features=AllowAggressiveThrottlingWithWebSocket,CalculateNativeWinOcclusion,EnableOopPrintDrivers,EnableWatermarkView,EnumerateDevicesRelaxedCache,HardwareMediaKeyHandling,IntensiveWakeUpThrottling,LogJsConsoleMessages,PostQuantumKyber,RequestInitiatorSiteLockEnfocement,SkipEmptyDisplayHotplugEvent,SpareRendererForSitePerProcess,WebRtcHideLocalIpsWithMdns,WinRetrieveSuggestionsOnlyOnDemand --variations-seed-version
 manikan+    5917    1908  0 10:14 ?        00:00:00 /usr/bin/snap userd
 manikan+    6802    4947  0 10:14 ?        00:00:01 /opt/google/chrome/chrome --type=utility --utility-sub-type=audio.mojom.AudioService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,8086137291192605393,3759340474260148984,524288 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
-manikan+    7257    5769  2 10:14 ?        00:09:30 /snap/slack/196/usr/lib/slack/slack --type=zygote --no-sandbox
+manikan+    7257    5769  2 10:14 ?        00:09:31 /snap/slack/196/usr/lib/slack/slack --type=zygote --no-sandbox
 manikan+    7283    5761  0 10:14 ?        00:00:06 /proc/self/exe --type=utility --utility-sub-type=audio.mojom.AudioService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=5816 --enable-crash-reporter=50ef4c44-f215-40d9-b586-9b276cba526b,no_channel --user-data-dir=/home/manikandana/snap/slack/196/.config/Slack --standard-schemes=app,slack-webapp-dev --secure-schemes=app,slack-webapp-dev --bypasscsp-schemes=slack-webapp-dev --cors-schemes=slack-webapp-dev --fetch-schemes=slack-webapp-dev --service-worker-schemes=slack-webapp-dev --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,15654117589985914813,8740638580040260405,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,PdfUseShowSaveFilePicker,WebRTCPipeWireCapturer --disable-features=AllowAggressiveThrottlingWithWebSocket,CalculateNativeWinOcclusion,EnableOopPrintDrivers,EnableWatermarkView,EnumerateDevicesRelaxedCache,HardwareMediaKeyHandling,IntensiveWakeUpThrottling,LogJsConsoleMessages,PostQuantumKyber,RequestInitiatorSiteLockEnfocement,SkipEmptyDisplayHotplugEvent,SpareRendererForSitePerProcess,WebRtcHideLocalIpsWithMdns,WinRetrieveSuggestionsOnlyOnDemand --variations-seed-version
 manikan+    7557    2081  0 10:15 ?        00:00:00 update-notifier
 manikan+    7587    4974  1 10:15 ?        00:07:27 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=36 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=79656795 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,11597251866021460435,17631819758223637408,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
@@ -381,35 +394,35 @@ manikan+   80725    4974  1 14:29 ?        00:02:36 /opt/google/chrome/chrome --
 manikan+   82461    4974  0 14:34 ?        00:00:11 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=427 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=13717465024 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,809705294184133466,14274855643676126858,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
 root       84196       2  0 14:38 ?        00:00:09 [kworker/9:1-rcu_par_gp]
 manikan+   84251    1908  0 14:38 ?        00:00:06 /usr/bin/nautilus --gapplication-service
-root       93907       2  0 15:01 ?        00:00:01 [kworker/u40:6-flush-259:0]
+root       93907       2  0 15:01 ?        00:00:01 [kworker/u40:6-efi_rts_wq]
 manikan+  102096    2068  0 15:22 ?        00:00:00 /usr/libexec/gvfsd-network --spawner :1.14 /org/gtk/gvfs/exec_spaw/2
 manikan+  102109    2068  0 15:22 ?        00:00:00 /usr/libexec/gvfsd-dnssd --spawner :1.14 /org/gtk/gvfs/exec_spaw/4
 root      105770       2  0 15:34 ?        00:00:11 [kworker/u41:2-i915_flip]
 root      105803       2  0 15:34 ?        00:00:00 [kworker/u40:3-flush-259:0]
 manikan+  107881    4974  0 15:41 ?        00:00:20 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=494 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=17744166143 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,13630050993876781134,10299493836588678020,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
-root      107927       2  0 15:41 ?        00:00:00 [kworker/u40:0-flush-259:0]
-root      108041       2  0 15:41 ?        00:00:00 [kworker/14:2-rcu_par_gp]
+root      107927       2  0 15:41 ?        00:00:00 [kworker/u40:0-ext4-rsv-conversion]
+root      108041       2  0 15:41 ?        00:00:00 [kworker/14:2-events]
 manikan+  112995    1908  0 15:57 ?        00:00:02 /usr/libexec/gnome-terminal-server
 manikan+  113013  112995  0 15:57 pts/1    00:00:00 bash
 root      113180  113013  0 15:58 pts/1    00:00:00 sudo apt update
 root      114224       2  0 16:01 ?        00:00:00 [kworker/u40:4-flush-259:0]
 manikan+  114743    4974  5 16:02 ?        00:03:10 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=514 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=19002386588 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,11893974175033526756,2786826577774011814,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
 manikan+  115862    4974  0 16:05 ?        00:00:06 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=530 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=19192426836 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,13735369753524420270,11762499172141545432,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
-root      117746       2  0 16:12 ?        00:00:00 [kworker/10:3-mm_percpu_wq]
-root      118205       2  0 16:14 ?        00:00:00 [kworker/u40:9-flush-259:0]
+root      117746       2  0 16:12 ?        00:00:00 [kworker/10:3-rcu_par_gp]
+root      118205       2  0 16:14 ?        00:00:00 [kworker/u40:9-writeback]
 manikan+  119049    4974  0 16:16 ?        00:00:02 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=540 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=19834033982 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,5597799614017647903,17352135047254464608,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
 root      119556       2  0 16:18 ?        00:00:00 [kworker/4:1-events]
-root      121060       2  0 16:22 ?        00:00:01 [kworker/9:3-i915-unordered]
+root      121060       2  0 16:22 ?        00:00:01 [kworker/9:3-events]
 root      122094       2  0 16:25 ?        00:00:00 [kworker/8:0-events]
 root      122273       2  0 16:26 ?        00:00:00 [kworker/u40:1-flush-259:0]
 root      122413       2  0 16:27 ?        00:00:00 [kworker/15:1-rcu_par_gp]
 root      123174       2  0 16:29 ?        00:00:00 [kworker/18:2-rcu_par_gp]
-root      123599       2  0 16:30 ?        00:00:00 [kworker/7:1-cgroup_bpf_destroy]
-root      124097       2  0 16:32 ?        00:00:00 [kworker/u40:5-ext4-rsv-conversion]
+root      123599       2  0 16:30 ?        00:00:00 [kworker/7:1-rcu_par_gp]
+root      124097       2  0 16:32 ?        00:00:00 [kworker/u40:5-flush-259:0]
 root      124163       1  0 16:32 ?        00:00:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 0d9933b0ff2d0a5a68853e14e265e76577a58ee525406b76fb04cc3079cc98af -address /run/containerd/containerd.sock
 root      124183  124163  0 16:32 ?        00:00:00 /bin/sh -c sh -c "python main.py"
 root      124216  124183  0 16:32 ?        00:00:00 sh -c python main.py
-root      124217  124216  0 16:32 ?        00:00:14 python main.py
+root      124217  124216  0 16:32 ?        00:00:15 python main.py
 root      124252  124217  0 16:32 ?        00:00:02 python main.py
 root      124261  124252  0 16:32 ?        00:00:00 python main.py
 root      124262  124252  0 16:32 ?        00:00:00 python main.py
@@ -431,94 +444,89 @@ root      124277  124252  0 16:32 ?        00:00:00 python main.py
 root      124278  124252  0 16:32 ?        00:00:00 python main.py
 root      124279  124252  0 16:32 ?        00:00:00 python main.py
 root      124280  124252  0 16:32 ?        00:00:00 python main.py
-root      124301       2  0 16:32 ?        00:00:00 [kworker/11:1-cgroup_bpf_destroy]
-root      124451       2  0 16:33 ?        00:00:00 [kworker/2:0-rcu_gp]
+root      124301       2  0 16:32 ?        00:00:00 [kworker/11:1-rcu_gp]
+root      124451       2  0 16:33 ?        00:00:00 [kworker/2:0-rcu_par_gp]
 root      124913       2  0 16:35 ?        00:00:00 [kworker/16:1-rcu_par_gp]
-root      125354       2  0 16:36 ?        00:00:00 [kworker/3:1-cgroup_destroy]
+root      125354       2  0 16:36 ?        00:00:00 [kworker/3:1-rcu_par_gp]
 root      125490       2  0 16:37 ?        00:00:00 [kworker/5:0-events]
 manikan+  126109    2106  0 16:39 ?        00:00:01 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 0:0:1920:1080:1:27:0:0:0:0
 root      126940       2  0 16:41 ?        00:00:00 [kworker/19:0-rcu_gp]
-root      126945       2  0 16:41 ?        00:00:00 [kworker/13:3-mm_percpu_wq]
-root      127455       2  0 16:43 ?        00:00:00 [kworker/12:2-mm_percpu_wq]
+root      126945       2  0 16:41 ?        00:00:00 [kworker/13:3-events]
+root      127455       2  0 16:43 ?        00:00:00 [kworker/12:2-events]
 root      127576       2  0 16:43 ?        00:00:00 [kworker/u41:0]
 root      127600       2  0 16:44 ?        00:00:00 [kworker/6:2-events]
 manikan+  127884    4974  0 16:44 ?        00:00:01 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=546 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=21526590207 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,13895834680267507219,9255796066716642012,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
-root      128104       2  0 16:45 ?        00:00:00 [kworker/2:2-events]
+root      128104       2  0 16:45 ?        00:00:00 [kworker/2:2-rcu_par_gp]
 root      128109       2  0 16:45 ?        00:00:00 [kworker/1:2-rcu_par_gp]
 root      128200       2  0 16:45 ?        00:00:00 [kworker/0:3-events]
-root      128201       2  0 16:45 ?        00:00:00 [kworker/0:4-rcu_par_gp]
-root      128250       2  0 16:46 ?        00:00:00 [kworker/8:2-events]
-root      128466       2  0 16:46 ?        00:00:00 [kworker/15:3-rcu_par_gp]
-root      128647       2  0 16:47 ?        00:00:00 [kworker/17:0-rcu_par_gp]
+root      128250       2  0 16:46 ?        00:00:00 [kworker/8:2-rcu_par_gp]
 manikan+  128778    4974  0 16:47 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=554 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=21676766225 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,1537547745450382458,17156831366179541018,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
 manikan+  128783    4974  0 16:47 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=555 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=21676782507 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,3104079908292768970,5017317713173245985,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
 manikan+  128791    4974  0 16:47 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=556 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=21676789900 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,10595123055367802570,8235984072834433390,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
 manikan+  128799    4974  0 16:47 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=557 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=21676794972 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,11348417026011949077,9621625070390893078,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
-root      128993       2  0 16:48 ?        00:00:00 [kworker/4:0-rcu_par_gp]
-root      129263       2  0 16:48 ?        00:00:00 [kworker/11:0-cgroup_destroy]
-root      129598       2  0 16:50 ?        00:00:00 [kworker/4:3-rcu_par_gp]
-root      129758       2  0 16:51 ?        00:00:00 [kworker/10:2-rcu_gp]
-root      129876       2  0 16:51 ?        00:00:00 [kworker/2:1-events]
+root      128993       2  0 16:48 ?        00:00:00 [kworker/4:0-cgroup_destroy]
+root      129263       2  0 16:48 ?        00:00:00 [kworker/11:0-rcu_par_gp]
+root      129758       2  0 16:51 ?        00:00:00 [kworker/10:2-events]
 root      129916       2  0 16:51 ?        00:00:00 [kworker/1:0-events]
 root      130038       2  0 16:52 ?        00:00:00 [kworker/6:0-rcu_par_gp]
-root      130181       2  0 16:52 ?        00:00:00 [kworker/13:1-cgroup_destroy]
-root      130205       2  0 16:52 ?        00:00:00 [kworker/9:0-rcu_par_gp]
-root      130333       2  0 16:52 ?        00:00:00 [kworker/17:1-mm_percpu_wq]
+root      130181       2  0 16:52 ?        00:00:00 [kworker/13:1-cgroup_bpf_destroy]
+root      130333       2  0 16:52 ?        00:00:00 [kworker/17:1-events]
 root      130359       2  0 16:53 ?        00:00:00 [kworker/19:2-rcu_par_gp]
 root      130663       2  0 16:54 ?        00:00:00 [kworker/7:0-rcu_par_gp]
-root      130775       2  0 16:54 ?        00:00:00 [kworker/18:0-rcu_par_gp]
 manikan+  130791    4974  0 16:54 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=562 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=22102668679 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,14917495652462067501,12810838838963304877,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
 manikan+  130799    4974  0 16:54 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=4961 --enable-crash-reporter=1151f02b-c662-4e59-bdf2-ca4a5995d25a, --enable-dinosaur-easter-egg-alt-images --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=563 --time-ticks-at-unix-epoch=-1751949847490706 --launch-time-ticks=22104455687 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,15860193756271497471,5075235312889351443,2097152 --field-trial-handle=3,i,14677328569988576204,8839061944135201780,262144 --disable-features=EyeDropper --variations-seed-version=20250703-180051.755000
 root      130838       2  0 16:54 ?        00:00:00 [kworker/16:0-events]
-root      131010       2  0 16:55 ?        00:00:00 [kworker/14:1-mm_percpu_wq]
+root      131010       2  0 16:55 ?        00:00:00 [kworker/14:1-rcu_gp]
 root      131139       2  0 16:55 ?        00:00:00 [kworker/u40:7-flush-259:0]
-root      131140       2  0 16:55 ?        00:00:00 [kworker/u40:10-i915]
-manikan+  131202    1908  1 16:55 ?        00:00:05 /snap/code/198/usr/share/code/code --no-sandbox --force-user-env
+root      131140       2  0 16:55 ?        00:00:00 [kworker/u40:10-ext4-rsv-conversion]
+manikan+  131202    1908  1 16:55 ?        00:00:07 /snap/code/198/usr/share/code/code --no-sandbox --force-user-env
 manikan+  131204  131202  0 16:55 ?        00:00:00 /snap/code/198/usr/share/code/code --type=zygote --no-zygote-sandbox --no-sandbox
 manikan+  131205  131202  0 16:55 ?        00:00:00 /snap/code/198/usr/share/code/code --type=zygote --no-sandbox
 manikan+  131224    1908  0 16:55 ?        00:00:00 /snap/code/198/usr/share/code/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --no-rate-limit --database=/home/manikandana/.config/Code/Crashpad --url=appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=e47082be-8f4b-4d5f-bb59-1a518a94b8bf&iid=e47082be-8f4b-4d5f-bb59-1a518a94b8bf&sid=e47082be-8f4b-4d5f-bb59-1a518a94b8bf --annotation=_companyName=Microsoft --annotation=_productName=VSCode --annotation=_version=1.101.2 --annotation=lsb-release=Ubuntu 22.04.5 LTS --annotation=plat=Linux --annotation=prod=Electron --annotation=ver=35.5.1 --initial-client-fd=46 --shared-client-connection
 manikan+  131255  131202  0 16:55 ?        00:00:00 /proc/self/exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=131224 --enable-crash-reporter=49cdf804-6725-4357-8eeb-a9abd80a1487,no_channel --user-data-dir=/home/manikandana/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,5426598790610582711,12991044069662823429,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
-manikan+  131308  131205  7 16:55 ?        00:00:33 /snap/code/198/usr/share/code/code --type=zygote --no-sandbox
-manikan+  131339  131202 12 16:55 ?        00:00:53 /proc/self/exe --type=gpu-process --disable-gpu-sandbox --no-sandbox --crashpad-handler-pid=131224 --enable-crash-reporter=49cdf804-6725-4357-8eeb-a9abd80a1487,no_channel --user-data-dir=/home/manikandana/.config/Code --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=3,i,5426598790610582711,12991044069662823429,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
-manikan+  131377  131202  0 16:55 ?        00:00:02 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=131224 --enable-crash-reporter=49cdf804-6725-4357-8eeb-a9abd80a1487,no_channel --user-data-dir=/home/manikandana/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,5426598790610582711,12991044069662823429,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+manikan+  131308  131205  7 16:55 ?        00:00:42 /snap/code/198/usr/share/code/code --type=zygote --no-sandbox
+manikan+  131339  131202 32 16:55 ?        00:03:08 /proc/self/exe --type=gpu-process --disable-gpu-sandbox --no-sandbox --crashpad-handler-pid=131224 --enable-crash-reporter=49cdf804-6725-4357-8eeb-a9abd80a1487,no_channel --user-data-dir=/home/manikandana/.config/Code --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=3,i,5426598790610582711,12991044069662823429,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+manikan+  131377  131202  0 16:55 ?        00:00:04 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=131224 --enable-crash-reporter=49cdf804-6725-4357-8eeb-a9abd80a1487,no_channel --user-data-dir=/home/manikandana/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,5426598790610582711,12991044069662823429,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
 manikan+  131387  131202  0 16:55 ?        00:00:01 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=131224 --enable-crash-reporter=49cdf804-6725-4357-8eeb-a9abd80a1487,no_channel --user-data-dir=/home/manikandana/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,5426598790610582711,12991044069662823429,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
 manikan+  131388  131202  0 16:55 ?        00:00:00 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=131224 --enable-crash-reporter=49cdf804-6725-4357-8eeb-a9abd80a1487,no_channel --user-data-dir=/home/manikandana/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,5426598790610582711,12991044069662823429,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
-manikan+  131397  131202  0 16:55 ?        00:00:04 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --crashpad-handler-pid=131224 --enable-crash-reporter=49cdf804-6725-4357-8eeb-a9abd80a1487,no_channel --user-data-dir=/home/manikandana/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,5426598790610582711,12991044069662823429,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+manikan+  131397  131202  0 16:55 ?        00:00:05 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --crashpad-handler-pid=131224 --enable-crash-reporter=49cdf804-6725-4357-8eeb-a9abd80a1487,no_channel --user-data-dir=/home/manikandana/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,5426598790610582711,12991044069662823429,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
 manikan+  131467  131377  0 16:55 pts/0    00:00:00 /usr/bin/bash --init-file /snap/code/198/usr/share/code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
 root      131572       2  0 16:55 ?        00:00:00 [kworker/3:0-mm_percpu_wq]
 root      131578       2  0 16:55 ?        00:00:00 [kworker/5:2-rcu_par_gp]
 manikan+  131731  131397  0 16:55 ?        00:00:00 /snap/code/198/usr/share/code/code /snap/code/198/usr/share/code/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=131397
 root      131882       2  0 16:56 ?        00:00:00 [kworker/0:0-rcu_par_gp]
-root      132301       2  0 16:57 ?        00:00:00 [kworker/8:1-rcu_par_gp]
 root      132302       2  0 16:57 ?        00:00:00 [kworker/12:1-rcu_par_gp]
 root      132454       2  0 16:57 ?        00:00:00 [kworker/13:0-cgroup_bpf_destroy]
-root      132457       2  0 16:57 ?        00:00:00 [kworker/8:3-rcu_par_gp]
-root      132608       2  0 16:58 ?        00:00:00 [kworker/9:2-rcu_par_gp]
-root      132727       2  0 16:58 ?        00:00:00 [kworker/17:2-rcu_gp]
-root      132756       2  0 16:58 ?        00:00:00 [kworker/19:1-events]
-root      132758       2  0 16:58 ?        00:00:00 [kworker/0:1-rcu_par_gp]
-root      132846       2  0 16:58 ?        00:00:00 [kworker/4:2]
-root      133056       2  0 17:00 ?        00:00:00 [kworker/8:4]
-root      133060       2  0 17:00 ?        00:00:00 [kworker/10:0-rcu_par_gp]
-root      133061       2  0 17:00 ?        00:00:00 [kworker/10:1-rcu_par_gp]
-root      133064       2  0 17:00 ?        00:00:00 [kworker/15:0-mm_percpu_wq]
-root      133177       2  0 17:00 ?        00:00:00 [kworker/18:1-mm_percpu_wq]
+root      132608       2  0 16:58 ?        00:00:00 [kworker/9:2-cgroup_destroy]
+root      132727       2  0 16:58 ?        00:00:00 [kworker/17:2-rcu_par_gp]
+root      132756       2  0 16:58 ?        00:00:00 [kworker/19:1-mm_percpu_wq]
+root      133064       2  0 17:00 ?        00:00:00 [kworker/15:0-events]
+root      133177       2  0 17:00 ?        00:00:00 [kworker/18:1-events]
 root      133208       2  0 17:00 ?        00:00:00 [kworker/16:2-rcu_par_gp]
 root      133211       2  0 17:00 ?        00:00:00 [kworker/1:1-rcu_par_gp]
 root      133327       2  0 17:00 ?        00:00:00 [kworker/7:2-events]
-root      133368       2  0 17:01 ?        00:00:00 [kworker/14:0-rcu_par_gp]
+root      133368       2  0 17:01 ?        00:00:00 [kworker/14:0-rcu_gp]
 root      133453       2  0 17:01 ?        00:00:00 [kworker/13:2]
-root      133518       2  0 17:01 ?        00:00:00 [kworker/5:1]
+root      133518       2  0 17:01 ?        00:00:00 [kworker/5:1-rcu_par_gp]
 root      133735       2  0 17:02 ?        00:00:00 [kworker/6:1-rcu_par_gp]
-root      133852       2  0 17:02 ?        00:00:00 [kworker/11:2-mld]
+root      133852       2  0 17:02 ?        00:00:00 [kworker/11:2-mm_percpu_wq]
 root      134031       2  0 17:02 ?        00:00:00 [kworker/19:3]
-root      134040       2  0 17:02 ?        00:00:00 [kworker/12:0-events]
-root      134105       1  0 17:02 ?        00:00:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 650aab20099ade804c29a739b6a12577f3252db2c8bb0aeb775ea94b5b0c020d -address /run/containerd/containerd.sock
+root      134040       2  0 17:02 ?        00:00:00 [kworker/12:0-rcu_par_gp]
 root      134123       2  0 17:02 ?        00:00:00 [kworker/11:3]
-root      134125  134105  1 17:02 ?        00:00:00 /usr/local/bin/python3.12 /usr/local/bin/uvicorn main:app --host 0.0.0.0 --port 8000
-manikan+  134275  131377  0 17:03 ?        00:00:00 /bin/sh -c "/snap/code/198/usr/share/code/resources/app/out/vs/base/node/cpuUsage.sh" 131467
-manikan+  134276  134275  0 17:03 ?        00:00:00 /bin/bash /snap/code/198/usr/share/code/resources/app/out/vs/base/node/cpuUsage.sh 131467
-manikan+  134279  134276  0 17:03 ?        00:00:00 sleep 1
-manikan+  134281  131467  0 17:03 pts/0    00:00:00 /bin/bash ./1.sh
-manikan+  134286  134281  0 17:03 pts/0    00:00:00 ps -ef
+root      134332       2  0 17:03 ?        00:00:00 [kworker/7:3]
+root      134563       2  0 17:03 ?        00:00:00 [kworker/2:1-events]
+root      134565       2  0 17:03 ?        00:00:00 [kworker/14:3]
+root      134567       2  0 17:03 ?        00:00:00 [kworker/17:0-rcu_par_gp]
+root      134724       2  0 17:04 ?        00:00:00 [kworker/0:1-rcu_par_gp]
+root      134734       2  0 17:04 ?        00:00:00 [kworker/4:2-cgroup_bpf_destroy]
+root      134819       2  0 17:04 ?        00:00:00 [kworker/4:3]
+root      134973       2  0 17:04 ?        00:00:00 [kworker/2:3-rcu_par_gp]
+root      134982       2  0 17:04 ?        00:00:00 [kworker/3:2-events]
+root      135259       2  0 17:05 ?        00:00:00 [kworker/15:2]
+root      135324       1  0 17:05 ?        00:00:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 650aab20099ade804c29a739b6a12577f3252db2c8bb0aeb775ea94b5b0c020d -address /run/containerd/containerd.sock
+root      135344  135324  7 17:05 ?        00:00:00 /usr/local/bin/python3.12 /usr/local/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+root      135370       2  0 17:05 ?        00:00:00 [kworker/10:0-rcu_par_gp]
+root      135371       2  0 17:05 ?        00:00:00 [kworker/8:1-rcu_par_gp]
+manikan+  135394  131467  0 17:05 pts/0    00:00:00 /bin/bash ./1.sh
+manikan+  135399  135394  0 17:05 pts/0    00:00:00 ps -ef
 #################################
